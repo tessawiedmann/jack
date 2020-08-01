@@ -1,5 +1,5 @@
 import * as React from 'react';
-import mapGif from './map.gif';
+import mapGif from '../assets/map.gif';
 import CSS from 'csstype';
 
 export function App() {
