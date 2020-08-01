@@ -22,7 +22,10 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader'
-            }
+            },
+            {
+                test: /\.(jpe?g|gif|png|svg)$/, loader: "file-loader?name=./images/[name].[ext]"
+            },
         ]
     },
 
