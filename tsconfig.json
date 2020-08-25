@@ -12,7 +12,7 @@
         "removeComments": true,
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
-        "baseUrl": "./",
+        "baseUrl": "./src",
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "resolveJsonModule": true

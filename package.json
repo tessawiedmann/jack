@@ -8,6 +8,7 @@
   },
   "main": "index.js",
   "devDependencies": {
+    "@types/react": "^16.9.46",
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "6.0.0",
     "html-webpack-plugin": "4.3.0",

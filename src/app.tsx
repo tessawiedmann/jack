@@ -1,25 +1,183 @@
 import * as React from 'react';
-import mapGif from '../assets/map.gif';
 import CSS from 'csstype';
 
-export function App() {
-    return (
-      <div style={container}>
-        <img src={mapGif} alt="loading..." usemap="#image_map"/>
-        <map name="image_map">
-          <area alt="planeTitle" title="planeTitle" href="planeLink" coords="77,52,221,169" shape="rect"/>
-          <area alt="boxTitle" title="boxTitle" href="boxLink" coords="67,430,167,537" shape="rect"/>
-          <area alt="heartTitle" title="heartTitle" href="heartLink" coords="89,668,212,779" shape="rect"/>
-          <area alt="coffeeTitle" title="coffeeTitle" href="coffeeLink" coords="365,561,466,643" shape="rect"/>
-          <area alt="recTitle" title="recTitle" href="recLink" coords="168,289,317,422" shape="rect"/>
-          <area alt="bubbleTitle" title="bubbleTitle" href="bubbleLink" coords="328,38,431,136" shape="rect"/>
-        </map>
-      </div>
-    )
+import { Map } from './map';
+import { Song } from './song';
+
+import wait1 from '../assets/wait1.png';
+import wait2 from '../assets/wait2.png';
+import wait3 from '../assets/wait3.png';
+import waitAudio from '../assets/waitAudio.mp3';
+
+import recMap1 from '../assets/recMap1.jpg';
+import recMap2 from '../assets/recMap2.jpg';
+import recMap3 from '../assets/recMap3.jpg';
+import recMap4 from '../assets/recMap4.jpg';
+import recR from '../assets/recR.jpg';
+import rec4 from '../assets/rec4.jpg';
+import recY from '../assets/recY.jpg';
+
+import weird1 from '../assets/weird1.jpg';
+import weird2 from '../assets/weird2.jpg';
+import weird3 from '../assets/weird3.jpg';
+import weird4 from '../assets/weird4.jpg';
+import weird5 from '../assets/weird5.jpg';
+import weird6 from '../assets/weird6.jpg';
+import weird7 from '../assets/weird7.jpg';
+import weird8 from '../assets/weird8.jpg';
+import weird9 from '../assets/weird9.jpg';
+
+import bitter1 from '../assets/bitter1.png';
+
+import love1 from '../assets/CSFIL1.png';
+import love2 from '../assets/CSFIL2.jpg';
+import love3 from '../assets/CSFIL3.jpg';
+import love4 from '../assets/CSFIL4.jpg';
+
+export enum Page {
+  Map,
+  Plane,
+  Coffee,
+  Box,
+  Rec,
+  Heart,
+  Bubble
 }
 
-const container: CSS.Properties = {
-  textAlign: 'center'
+interface IProps {
 }
 
-// https://stackoverflow.com/a/61493410
+interface IState {
+  page: Page;
+};
+
+export class App extends React.Component<IProps, IState> {
+  state: IState = {
+    page: Page.Map
+  };
+
+  render() {
+    switch (this.state.page) {
+      case Page.Map:
+        return (
+          <Map moveToPage={this.moveToPage} />
+        )
+      case Page.Plane:
+        // Wait for me
+        return (
+          <Song moveToPage={this.moveToPage} title={'Wait for me'}
+            imageContent={
+              [<img src={wait1} style={this.imageStyle} />,
+              <img src={wait2} style={this.imageStyle} />,
+              <img src={wait3} style={this.imageStyle} />]
+            }
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/1lybrlSbx34" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+            audioContent={[
+              <audio src={waitAudio} controls style={this.audioStyle} />
+            ]}
+          />
+        )
+      case Page.Box:
+        // Bittersweet
+        return (
+          <Song moveToPage={this.moveToPage} title={'Bittersweet'}
+            imageContent={
+              [<img src={bitter1} style={this.imageStyle} />]
+            }
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/3tNWHPzbcJs" frameBorder="0" allow-fullscreen></iframe>,
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/2Zf9FaMuQWo" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+          />
+        )
+      case Page.Rec:
+        // Rec4Y
+        return (
+          <Song moveToPage={this.moveToPage} title={'Recommended for you'}
+            imageContent={
+              [<img src={recMap1} style={this.imageStyle} />,
+              <img src={recMap2} style={this.imageStyle} />,
+              <img src={recMap3} style={this.imageStyle} />,
+              <img src={recMap4} style={this.imageStyle} />,
+              <img src={recR} style={this.imageStyle} />,
+              <img src={rec4} style={this.imageStyle} />,
+              <img src={recY} style={this.imageStyle} />]
+            }
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/eczjAkftqmU" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+          />
+        )
+      case Page.Bubble:
+        // Single
+        return (
+          <Song moveToPage={this.moveToPage} title={'Single'}
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/jqfaHhQtLDk" frameBorder="0" allow-fullscreen></iframe>,
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/829v6EsxN9A" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+          />
+        )
+      case Page.Coffee:
+        // Is it weird
+        return (
+          <Song moveToPage={this.moveToPage} title={'Is it weird'}
+            imageContent={
+              [<img src={weird1} style={this.imageStyle} />,
+              <img src={weird2} style={this.imageStyle} />,
+              <img src={weird3} style={this.imageStyle} />,
+              <img src={weird4} style={this.imageStyle} />,
+              <img src={weird5} style={this.imageStyle} />,
+              <img src={weird6} style={this.imageStyle} />,
+              <img src={weird7} style={this.imageStyle} />,
+              <img src={weird8} style={this.imageStyle} />,
+              <img src={weird9} style={this.imageStyle} />]
+            }
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/uIwy_YvB8lU" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+          />
+        )
+      case Page.Heart:
+        // Can't stop falling in love 
+        return (
+          <Song moveToPage={this.moveToPage} title={'Can\'t stop falling in love'}
+            imageContent={
+              [<img src={love1} style={this.imageStyle} />,
+              <img src={love2} style={this.imageStyle} />,
+              <img src={love3} style={this.imageStyle} />,
+              <img src={love4} style={this.imageStyle} />]
+            }
+            videoContent={[
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/RozGVf0nFZ0" frameBorder="0" allow-fullscreen></iframe>,
+              <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/YEqlahDF10s" frameBorder="0" allow-fullscreen></iframe>
+            ]}
+          />
+        )
+    }
+
+  }
+
+  moveToPage = (page: Page) => {
+    this.setState({
+      page: page
+    });
+  }
+
+  imageStyle: CSS.Properties = {
+    maxWidth: '350px',
+    margin: '15px 35px'
+  }
+
+  videoStyle: CSS.Properties = {
+    marginLeft: '15px',
+    marginRight: '15px',
+    marginBottom: '15px'
+  }
+
+  audioStyle: CSS.Properties = {
+    marginBottom: '15px',
+  }
+}
