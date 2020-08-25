@@ -17,22 +17,22 @@ import recR from '../assets/recR.jpg';
 import rec4 from '../assets/rec4.jpg';
 import recY from '../assets/recY.jpg';
 
-import weird1 from '../assets/weird1.jpg';
-import weird2 from '../assets/weird2.jpg';
-import weird3 from '../assets/weird3.jpg';
+import weird1 from '../assets/weird1.JPG';
+import weird2 from '../assets/weird2.JPG';
+import weird3 from '../assets/weird3.JPG';
 import weird4 from '../assets/weird4.jpg';
-import weird5 from '../assets/weird5.jpg';
-import weird6 from '../assets/weird6.jpg';
+import weird5 from '../assets/weird5.JPG';
+import weird6 from '../assets/weird6.JPG';
 import weird7 from '../assets/weird7.jpg';
-import weird8 from '../assets/weird8.jpg';
+import weird8 from '../assets/weird8.JPG';
 import weird9 from '../assets/weird9.jpg';
 
 import bitter1 from '../assets/bitter1.png';
 
 import love1 from '../assets/CSFIL1.png';
-import love2 from '../assets/CSFIL2.jpg';
+import love2 from '../assets/CSFIL2.JPG';
 import love3 from '../assets/CSFIL3.jpg';
-import love4 from '../assets/CSFIL4.jpg';
+import love4 from '../assets/CSFIL4.JPG';
 
 export enum Page {
   Map,
