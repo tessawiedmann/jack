@@ -13,9 +13,9 @@ import recMap1 from '../assets/recMap1.jpg';
 import recMap2 from '../assets/recMap2.jpg';
 import recMap3 from '../assets/recMap3.jpg';
 import recMap4 from '../assets/recMap4.jpg';
-// import recR from '../assets/recR.jpg';
-// import rec4 from '../assets/rec4.jpg';
-// import recY from '../assets/recY.jpg';
+import recR from '../assets/recR.jpg';
+import rec4 from '../assets/rec4.jpg';
+import recY from '../assets/recY.jpg';
 
 import weird1 from '../assets/weird1.JPG';
 import weird2 from '../assets/weird2.JPG';
@@ -27,7 +27,7 @@ import weird7 from '../assets/weird7.jpg';
 import weird8 from '../assets/weird8.JPG';
 import weird9 from '../assets/weird9.jpg';
 
-//import bitter1 from '../assets/bitter1.png';
+import bittersweet1 from '../assets/bittersweet1.jpg';
 
 import love1 from '../assets/CSFIL1.png';
 import love2 from '../assets/CSFIL2.JPG';
@@ -84,7 +84,7 @@ export class App extends React.Component<IProps, IState> {
         return (
           <Song moveToPage={this.moveToPage} title={'Bittersweet'}
             imageContent={
-              [<img src={recMap1} style={this.imageStyle} />] // TO DO
+              [<img src={bittersweet1} style={this.imageStyle} />]
             }
             videoContent={[
               <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/3tNWHPzbcJs" frameBorder="0" allow-fullscreen></iframe>,
@@ -101,9 +101,9 @@ export class App extends React.Component<IProps, IState> {
               <img src={recMap2} style={this.imageStyle} />,
               <img src={recMap3} style={this.imageStyle} />,
               <img src={recMap4} style={this.imageStyle} />,
-              <img src={recMap1} style={this.imageStyle} />, //recR
-              <img src={recMap1} style={this.imageStyle} />, //rec4
-              <img src={recMap1} style={this.imageStyle} />] //recY
+              <img src={recR} style={this.imageStyle} />,
+              <img src={rec4} style={this.imageStyle} />,
+              <img src={recY} style={this.imageStyle} />]
             }
             videoContent={[
               <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/eczjAkftqmU" frameBorder="0" allow-fullscreen></iframe>
@@ -168,6 +168,7 @@ export class App extends React.Component<IProps, IState> {
 
   imageStyle: CSS.Properties = {
     maxWidth: '350px',
+    maxHeight: '350px',
     margin: '15px 35px'
   }
 
