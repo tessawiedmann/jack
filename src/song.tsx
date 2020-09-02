@@ -2,34 +2,32 @@ import * as React from 'react';
 import CSS from 'csstype';
 
 import { Page } from './app';
+import backgroundMap from '../assets/background.jpg';
 
 interface IProps {
     moveToPage: (page: Page) => void;
     title: string;
+    soundCloudTrackId?: string;
     imageContent?;
     videoContent?;
-    audioContent?;
 }
 
 export function Song(props: IProps) {
     return (
-        <>
+        <div style={{backgroundImage: `url(${backgroundMap})`}}>
         <button onClick={() => props.moveToPage(Page.Map)} style={backStyle}>Back</button>
-
         <div style={metaContainerStyle}>
-            <h1>{props.title}</h1>
-            <a href={'https://soundcloud.com/jackblair_r4y'}>https://soundcloud.com/jackblair_r4y</a>
+            <h1 style={{backgroundColor: 'white'}}>{props.title}</h1>
+            <iframe width="100%" height="300" scrolling="no" style={{marginBottom: '15px'}} frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${props.soundCloudTrackId}&color=%23447c7c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}></iframe>
+            {!props.soundCloudTrackId && <a href={'https://soundcloud.com/jackblair_r4y'}>https://soundcloud.com/jackblair_r4y</a>}
             <div style={containerStyle}>
                 {props.imageContent}
             </div>
             <div style={containerStyle}>
                 {props.videoContent}
             </div>
-            <div style={containerStyle}>
-                {props.audioContent}
-            </div>
         </div>
-        </>
+        </div>
     )
 }
 
@@ -59,5 +57,3 @@ const metaContainerStyle: CSS.Properties = {
     width: '100%',
     textAlign: 'center'
 }
-
-
