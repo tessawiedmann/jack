@@ -2,7 +2,7 @@ import * as React from 'react';
 import CSS from 'csstype';
 
 import { Page } from './app';
-import backgroundMap from '../assets/background.jpg';
+import backgroundMap from '../assets/background.JPG'
 
 interface IProps {
     moveToPage: (page: Page) => void;
