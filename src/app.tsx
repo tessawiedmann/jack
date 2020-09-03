@@ -118,10 +118,10 @@ export class App extends React.Component<IProps, IState> {
             imageContent={
               [<h3 style={this.titleStyle}>{'A Unified Quest'}</h3>,
               <h5 style={this.subTitleStyle}>{'Artist: Various artists, family and friends'}</h5>,
-              <img src={recMap1} style={this.imageStyle} />,
-              <img src={recMap2} style={this.imageStyle} />,
-              <img src={recMap3} style={this.imageStyle} />,
-              <img src={recMap4} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/map1_o8kVR2Ab-I.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/map2_G9ZzJu1Fm.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/map3_0hwGVEC6I.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/map4_qgyGJZq0a.jpg'} style={this.imageStyle} />,
               <h3 style={this.titleStyle}>{'R 4 Y'}</h3>,
               <h5 style={this.subTitleStyle}>{'Visual Artist: Hannah Kast'}</h5>,
               <img src={recR} style={this.imageStyle} />,
@@ -169,7 +169,7 @@ export class App extends React.Component<IProps, IState> {
                 <img src={weird9} style={this.imageStyle} />]
             }
             videoContent={[
-              <h3 style={this.titleStyle}>{'...is it weird live? (feat. Time Garner and Ethan Kimberly)'}</h3>,
+              <h3 style={this.titleStyle}>{'...is it weird live? (feat. Tim Garner and Ethan Kimberly)'}</h3>,
               <iframe style={this.videoStyle} width="560" height="315" src="https://www.youtube.com/embed/uIwy_YvB8lU" frameBorder="0" allow-fullscreen></iframe>
             ]}
           />
