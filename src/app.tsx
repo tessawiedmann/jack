@@ -4,35 +4,6 @@ import CSS from 'csstype';
 import { Map } from './map';
 import { Song } from './song';
 
-import wait1 from '../assets/wait1.png';
-import wait2 from '../assets/wait2.png';
-import wait3 from '../assets/wait3.png';
-
-import recMap1 from '../assets/recMap1.jpg';
-import recMap2 from '../assets/recMap2.jpg';
-import recMap3 from '../assets/recMap3.jpg';
-import recMap4 from '../assets/recMap4.jpg';
-import recR from '../assets/recR.jpg';
-import rec4 from '../assets/rec4.jpg';
-import recY from '../assets/recY.jpg';
-
-import weird1 from '../assets/weird1.JPG';
-import weird2 from '../assets/weird2.JPG';
-import weird3 from '../assets/weird3.JPG';
-import weird4 from '../assets/weird4.jpg';
-import weird5 from '../assets/weird5.JPG';
-import weird6 from '../assets/weird6.JPG';
-import weird7 from '../assets/weird7.jpg';
-import weird8 from '../assets/weird8.JPG';
-import weird9 from '../assets/weird9.jpg';
-
-import bittersweet1 from '../assets/bittersweet1.jpg';
-
-import love1 from '../assets/CSFIL1.png';
-import love2 from '../assets/CSFIL2.JPG';
-import love3 from '../assets/CSFIL3.jpg';
-import love4 from '../assets/CSFIL4.JPG';
-
 export enum Page {
   Map,
   Plane,
@@ -55,18 +26,6 @@ export class App extends React.Component<IProps, IState> {
     page: Page.Map
   };
 
-  private imgDim: number;
-
-  componentDidMount() {
-    const screenSize = screen.width;
-
-    if (screenSize > 400) {
-      this.imgDim = 350;
-    } else {
-      this.imgDim = 200;
-    }
-  }
-
   render() {
     switch (this.state.page) {
       case Page.Map:
@@ -80,9 +39,9 @@ export class App extends React.Component<IProps, IState> {
             soundCloudTrackId={'882712858'}
             imageContent={
               [<h3 style={this.titleStyle}>{'Wait for me Poem/Lyrics'}</h3>,
-              <img src={wait1} style={this.imageStyle} />,
-              <img src={wait2} style={this.imageStyle} />,
-              <img src={wait3} style={this.imageStyle} />]
+              <img src={'https://ik.imagekit.io/r4y/Waitfor_me1_Zd42i3rp2.png'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/Waitforme2_Mv7m_A1WS.png'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/wait_for_me3_K1yDpz6jC.png'} style={this.imageStyle} />]
             }
             videoContent={[
               <h3 style={this.titleStyle}>{'Wait for me Spoken Word'}</h3>,
@@ -99,7 +58,7 @@ export class App extends React.Component<IProps, IState> {
             imageContent={
               [<h3 style={this.titleStyle}>{'A recipe for Nostalgia'}</h3>,
               <h5 style={this.subTitleStyle}>{'Visual Artist: Audrey Walters'}</h5>,
-              <img src={bittersweet1} style={this.imageStyle} />]
+              <img src={'https://ik.imagekit.io/r4y/AnyConv.com__Bittersweet_recipe-min_EvJFPVE7H.jpg'} style={this.imageStyle} />]
             }
             videoContent={[
               <h3 style={this.titleStyle}>{'The Official Bittersweet Music Video'}</h3>,
@@ -124,9 +83,9 @@ export class App extends React.Component<IProps, IState> {
               <img src={'https://ik.imagekit.io/r4y/map4_qgyGJZq0a.jpg'} style={this.imageStyle} />,
               <h3 style={this.titleStyle}>{'R 4 Y'}</h3>,
               <h5 style={this.subTitleStyle}>{'Visual Artist: Hannah Kast'}</h5>,
-              <img src={recR} style={this.imageStyle} />,
-              <img src={rec4} style={this.imageStyle} />,
-              <img src={recY} style={this.imageStyle} />]
+              <img src={'https://ik.imagekit.io/r4y/R-min_9RNZRCh6y4.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/4-min_mNh5FVP_x.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/Y-min_uBkAJSYfk.jpg'} style={this.imageStyle} />]
             }
             videoContent={[
               <h3 style={this.titleStyle}>{'Recommended for you Strings'}</h3>,
@@ -158,15 +117,15 @@ export class App extends React.Component<IProps, IState> {
               [
                 <h3 style={this.titleStyle}>{'Anonymous Love Stories'}</h3>,
                 <h5 style={this.subTitleStyle}>{'Photographer: Nick Raihala'}</h5>,
-                <img src={weird1} style={this.imageStyle} />,
-                <img src={weird2} style={this.imageStyle} />,
-                <img src={weird3} style={this.imageStyle} />,
-                <img src={weird4} style={this.imageStyle} />,
-                <img src={weird5} style={this.imageStyle} />,
-                <img src={weird6} style={this.imageStyle} />,
-                <img src={weird7} style={this.imageStyle} />,
-                <img src={weird8} style={this.imageStyle} />,
-                <img src={weird9} style={this.imageStyle} />]
+                <img src={'https://ik.imagekit.io/r4y/weird1_t9_TJBuOa.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird2_rbW9oaYU9v.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird3_YiARiSuSLR.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird4_kL5xntNSY.jpg'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird5_bH3mqWffI.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird6_Yu-WnP7EK.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird7_57Sg4ni8S.jpg'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird8_N9vpXWkdR.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird9_y6u7ekkGs.jpg'} style={this.imageStyle} />]
             }
             videoContent={[
               <h3 style={this.titleStyle}>{'...is it weird live? (feat. Tim Garner and Ethan Kimberly)'}</h3>,
@@ -182,10 +141,10 @@ export class App extends React.Component<IProps, IState> {
             imageContent={
               [<h3 style={this.titleStyle}>{'A Story in 4 Pics'}</h3>,
               <h5 style={this.subTitleStyle}>{'Visual Artist: Sarah Schuster'}</h5>,
-              <img src={love1} style={this.imageStyle} />,
-              <img src={love2} style={this.imageStyle} />,
-              <img src={love3} style={this.imageStyle} />,
-              <img src={love4} style={this.imageStyle} />]
+              <img src={'https://ik.imagekit.io/r4y/CSFIL1_nrhG4Bcmp.png'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/CSFIL2_nnhjzLbR9.JPG'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/CSFIL3_GpZIJiDeC.jpg'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/CSFIL4_of2bY_LJF.JPG'} style={this.imageStyle} />]
             }
             videoContent={[
               <h3 style={this.titleStyle}>{'The making of Can\'t Stop Falling in Love'}</h3>,
