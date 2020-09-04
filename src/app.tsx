@@ -182,14 +182,14 @@ export class App extends React.Component<IProps, IState> {
   titleStyle: CSS.Properties = {
     width: '100%',
     paddingBottom: 0,
-    backgroundColor: 'white',
+    //backgroundColor: 'white',
     margin: 0
   }
 
   subTitleStyle: CSS.Properties = {
     width: '100%',
     paddingBottom: '5px',
-    backgroundColor: 'white',
+    //backgroundColor: 'white',
     margin: 0
   }
 }
