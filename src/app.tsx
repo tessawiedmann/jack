@@ -111,7 +111,7 @@ export class App extends React.Component<IProps, IState> {
       case Page.Coffee:
         // Is it weird
         return (
-          <Song moveToPage={this.moveToPage} title={'Is it weird?'}
+          <Song moveToPage={this.moveToPage} title={'is it weird?'}
             soundCloudTrackId={'880771258'}
             imageContent={
               [
@@ -141,7 +141,7 @@ export class App extends React.Component<IProps, IState> {
             imageContent={
               [<h3 style={this.titleStyle}>{'A Story in 4 Pics'}</h3>,
               <h5 style={this.subTitleStyle}>{'Visual Artist: Sarah Schuster'}</h5>,
-              <img src={'https://ik.imagekit.io/r4y/CSFIL1_nrhG4Bcmp.png'} style={this.imageStyle} />,
+              <img src={'https://ik.imagekit.io/r4y/image0_M4T6Hal3j.jpeg'} style={this.imageStyle} />,
               <img src={'https://ik.imagekit.io/r4y/CSFIL2_nnhjzLbR9.JPG'} style={this.imageStyle} />,
               <img src={'https://ik.imagekit.io/r4y/CSFIL3_GpZIJiDeC.jpg'} style={this.imageStyle} />,
               <img src={'https://ik.imagekit.io/r4y/CSFIL4_of2bY_LJF.JPG'} style={this.imageStyle} />]
@@ -168,7 +168,11 @@ export class App extends React.Component<IProps, IState> {
   imageStyle: CSS.Properties = {
     maxWidth: '350px',
     maxHeight: '350px',
-    margin: '15px 35px'
+    padding: '15px 35px',
+    // backgroundColor: 'white',
+
+    // overflow: 'hidden',
+    // position: 'relative'
   }
 
   videoStyle: CSS.Properties = {

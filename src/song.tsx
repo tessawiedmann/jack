@@ -21,7 +21,7 @@ export function Song(props: IProps) {
             <iframe width="100%" height="300" scrolling="no" style={{marginBottom: '15px'}} frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${props.soundCloudTrackId}&color=%23447c7c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}></iframe>
             {!props.soundCloudTrackId && <a href={'https://soundcloud.com/jackblair_r4y'}>https://soundcloud.com/jackblair_r4y</a>}
             <div style={containerStyle}>
-                {props.imageContent}
+                <div style={imgStyle}>{props.imageContent}</div>
             </div>
             <div style={containerStyle}>
                 {props.videoContent}
@@ -43,6 +43,17 @@ const backStyle: CSS.Properties = {
     display: 'inline-block',
     fontSize: '12px',
     cursor: 'pointer'
+}
+
+const imgStyle: CSS.Properties = {
+    // position: 'absolute',
+    // left: '-1000%',
+    // right: '-1000%',
+    // top: '-1000%',
+    // bottom: '-1000%',
+    // margin: 'auto',
+    // minHeight: '100%',
+    // minWidth: '100%'
 }
 
 const containerStyle: CSS.Properties = {
