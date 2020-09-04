@@ -120,11 +120,11 @@ export class App extends React.Component<IProps, IState> {
                 <img src={'https://ik.imagekit.io/r4y/weird1_t9_TJBuOa.JPG'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird2_rbW9oaYU9v.JPG'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird3_YiARiSuSLR.JPG'} style={this.imageStyle} />,
-                <img src={'https://ik.imagekit.io/r4y/weird4_kL5xntNSY.jpg'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird8_N9vpXWkdR.JPG'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird5_bH3mqWffI.JPG'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird6_Yu-WnP7EK.JPG'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird7_57Sg4ni8S.jpg'} style={this.imageStyle} />,
-                <img src={'https://ik.imagekit.io/r4y/weird8_N9vpXWkdR.JPG'} style={this.imageStyle} />,
+                <img src={'https://ik.imagekit.io/r4y/weird4_kL5xntNSY.jpg'} style={this.imageStyle} />,
                 <img src={'https://ik.imagekit.io/r4y/weird9_y6u7ekkGs.jpg'} style={this.imageStyle} />]
             }
             videoContent={[
