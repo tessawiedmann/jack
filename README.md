@@ -1,3 +1,3 @@
 # jack
 
-To run: `npm install` then `npm start`
+To run: `npm install` then `npm start` 
